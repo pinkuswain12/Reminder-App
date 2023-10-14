@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminder Management System</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+       
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Reminder Management System</h1>
+        <div class="reminder">
+            <input type="text" placeholder="Enter your reminder...">
+            <input type="submit" value="Add">
+        </div>
+        <!-- List of reminders -->
+        <ul id="reminder-list"></ul>
+    </div>
+    <script>
+        // Function to add a new reminder
+        function addReminder() {
+            const inputField = document.querySelector('input[type="text"]');
+            const reminderText = inputField.value.trim();
+            
+            if (reminderText !== '') {
+                const reminderList = document.getElementById('reminder-list');
+                const li = document.createElement('li');
+                li.textContent = reminderText;
+
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Delete';
+                deleteButton.className = 'delete-button';
+                deleteButton.addEventListener('click', function() {
+                    li.remove();
+                });
+
+                li.appendChild(deleteButton);
+                reminderList.appendChild(li);
+                inputField.value = '';
+            }
+        }
+
+        // Event listener for the "Add" button
+        document.querySelector('input[type="submit"]').addEventListener('click', addReminder);
+
+        
+    </script>
+</body>
+</html>

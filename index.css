@@ -1,0 +1,33 @@
+.container{
+  background-color: lightgoldenrodyellow;
+}
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+    text-decoration: underline;
+   
+}
+.reminder:hover {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #00ffaa;
+}
+.reminder input[type="text"] {
+    width: 70%;
+}
+.reminder input[type="submit"], .reminder .delete-button {
+    background-color: #007BFF;
+    color: #633a3a;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+ }
+    .reminder .delete-button {
+        background-color: #FF0000;
+        margin-left: 10px;
+    }
